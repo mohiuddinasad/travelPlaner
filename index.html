@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="tp">
+        <h1>Travel planner</h1>
+
+        <div class="section">
+            <p class="section-title">Destinations</p>
+            <div class="check-group">
+                <label class="check-item"><input type="checkbox" value="600"> Cox's Bazar <span class="price">$600</span></label>
+                <label class="check-item"><input type="checkbox" value="700"> Sylhet <span class="price">$700</span></label>
+                <label class="check-item"><input type="checkbox" value="1000"> Bandarban <span class="price">$1,000</span></label>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="section">
+            <p class="section-title">Dates</p>
+            <div class="date-row">
+                <div class="date-field">
+                    <label for="startDate">Start</label>
+                    <input type="date" id="startDate">
+                </div>
+                <div class="date-field">
+                    <label for="endDate">End</label>
+                    <input type="date" id="endDate">
+                </div>
+            </div>
+            <p id="dateMessage"></p>
+        </div>
+
+        <hr>
+
+        <div class="section">
+            <p class="section-title">Activities</p>
+            <div class="check-group">
+                <label class="check-item"><input type="checkbox" value="200"> Hiking <span class="price">$200</span></label>
+                <label class="check-item"><input type="checkbox" value="250"> Boat ride <span class="price">$250</span></label>
+                <label class="check-item"><input type="checkbox" value="400"> Camping <span class="price">$400</span></label>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="budget-row">
+            <span class="budget-label">Total budget</span>
+            <span class="budget-value">$<span id="budget">0</span></span>
+        </div>
+
+        <div class="btn-row">
+            <button onclick="calculateBudget()">Calculate</button>
+            <button onclick="resetPlanner()" class="danger">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
